@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image Upload</title>
+<style>
+  :root {
+  --clr-one: rgb(255, 20, 147);}
+  body{
+    background-color:black;
+  
+  
+  
+ 
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /*background: var(--clr-bg);*/
+  font-family: "Balsamiq Sans", cursive;
+  overflow: hidden;
+}
+
+h1 {
+  color: rgba(255, 255, 255, 0.89);
+  margin-top: -75px;}
+
+p {
+  margin-top: 0em;
+  color: white;
+}
+  input{
+    width:70%;
+    font-family:cursive;
+  }
+
+.container {
+  margin-top: -10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.buttons {
+  
+            margin: 5px;
+            padding: 5px;
+         
+            width: 250px;
+            height: 110px;
+            overflow: auto;
+            text-align: justify;
+        
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.neon-button {
+  font-size: 1rem;
+
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  margin: 2rem;
+  border-radius: 0.25em;
+  position: relative;
+}
+
+
+.neon-button{
+  color: var(--clr-one);
+  border: var(--clr-one) 0.125em solid;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em --clr-one;
+  box-shadow: inset 0 0 0.5em 0 var(--clr-one), 0 0 0.5em 0 var(--clr-one);
+}
+.neon-button::before {
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: perspective(1.5em) rotateX(45deg) scale(0.8, 0.3);
+  filter: blur(1.5em);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.neon-button.active::before {
+  animation: scalingShadow 0.5s ease-in-out;
+}
+
+@keyframes scalingShadow {
+  0% {
+    top: 120%;
+    transform: perspective(1.5em) rotateX(45deg) scale(0.8, 0.3);
+  }
+  50% {
+    top: 165%;
+    transform: perspective(1.5em) rotateX(45deg) scale(0.75, 0.3);
+  }
+  100% {
+    top: 120%;
+    transform: perspective(1.5em) rotateX(45deg) scale(0.8, 0.3);
+  }
+}
+
+.neon-button::before {
+  background: var(--clr-one);
+}
+  
+  .neon-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 100ms linear;
+}
+
+.neon-button::after {
+  box-shadow: 0 0 2em 0.5em var(--clr-one);
+  background-color: var(--clr-one);
+}
+  
+  .neon-button:hover::before,
+.neon-button:focus::before {
+  opacity: 1;
+}
+
+.neon-button:hover::after,
+.neon-button:focus::after {
+  opacity: 1;
+}
+
+.neon-button:hover,
+.neon-button:focus {
+  outline: none;
+  color: var(--clr-bg);
+  text-shadow: none;
+}
+
+.active {
+  animation: animate 0.5s ease-in-out;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-40%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+#uploaded-image {
+width: 25%;
+height:250px;
+border:1px solid rgba(251, 255, 161, 0.24);
+padding: 1px;
+margin-top: 20px;
+  margin-bottom:-50px;
+display: none;
+  margin-left:-200px;
+background-size: cover;
+    background-position: center;
+    transform-style: peserve- 3d; 
+    transform: rotateX(-35deg) rotateY(-25deg);
+  transition: transfom 0.5s ease-in-out;
+  box-shadow:0 0 100px rgb(253, 255, 253) ;
+   box-shadow:0 0 10px rgba(255, 146, 0, 1);
+  }
+  h2{
+   taxt-shadow:0 0 25px rgba(34, 14, 214, 0.959), 0 0 7px rgb(0, 0, 0),0 0 10px rgb(0, 0, 0); 
+    color:aqua ;
+    text-align: center;
+   font-family:cursive ;
+    font-size: 10px bold;
+    margin-top:-250px;
+    margin-left:100px;
+    margin-top:-10px;
+  }
+  .contant{
+    display: flex;
+     margin-top:-25px;
+
+    padding-top:-10px;
+    display:none;
+    font-size:20px;
+    font-family:'pacifico',cursive;
+    color:red;
+    taxt-shadow:0 0 9px blue, 0 0 7px #fff,0 0 10px #fff;
+    
+  }
+  #image-upload{
+    margin-top:-100px;
+  }
+  placeholder{
+    font-family:cursive;
+    color:red;
+  }
+</style>
+</head>
+<body>
+<input type="file" id="image-upload" accept="image/*" class=" neon-button">
+<img id="uploaded-image" src="" alt="Uploaded Image">
+
+  
+  <div class="button" id="m1">
+  <input type="text" placeholder= "enter name" id="name"class=" neon-button" style="background:black; color:white; font-family:cursive;">
+   <br>
+  <br>
+  <button onclick="show()" class="neon-button" style="background:black; color:white; font-family:cursive;"> OK</button>
+  
+  </div>
+  <div class="contant" id="c1" >
+  <center>
+    <h2>Happy</h2><h2 class="hert">diwali</h2>
+     
+    <h2 id="addname"></h2>
+     <h2>ji</h2>
+    
+  </center>
+</div>
+         
+  
+  <script>
+const imageUpload = document.getElementById('image-upload');
+const uploadedImage = document.getElementById('uploaded-image');
+
+imageUpload.addEventListener('change', function() {
+const file = this.files[0];
+const reader = new FileReader();
+
+reader.onload = function(event) {
+uploadedImage.src = event.target.result;
+uploadedImage.style.display = 'block';
+};
+
+reader.readAsDataURL(file);
+});
+  function show(){
+    var name=document.getElementById('name').value;
+    if(document.getElementById('name').value==""){
+      alert('please enter your name baby');
+    }
+    else{
+      document.getElementById('addname').innerHTML=name;
+      document.getElementById('m1').style.display='none';
+      document.getElementById('c1').style.display='block';
+    }
+  }
+</script>
+</body>
+</html>
