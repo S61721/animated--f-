@@ -1,0 +1,492 @@
+<html>
+<head>
+  <style>
+  
+
+  :root {
+  --clr-one: rgb(255, 20, 147);
+  --clr-two: rgb(127, 255, 0);
+  --clr-three: rgb(138, 43, 226);
+  --clr-four: rgb(184, 243, 46);
+  --clr-five: rgb(221, 18, 18);
+  --clr-6: rgb(70, 112, 86);
+  --clr-7: rgb(103, 68, 185);
+  --clr-8: rgb(177, 57, 123);
+  --clr-9: rgba(0, 206, 106, 0.62);
+  --clr-10: rgb(52, 221, 18);
+  --clr-11: rgb(221, 18, 130);
+  --clr-12: rgb(54, 142, 148);
+  --clr-13: rgb(221, 18, 221);
+  --clr-bg: rgb(2,2,2);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+  
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--clr-bg);
+  font-family: "Balsamiq Sans", cursive;
+  overflow: hidden;
+}
+
+h1 {
+  color: rgba(255, 255, 255, 0.89);
+  margin-top: -75px;}
+
+p {
+  margin-top: 0em;
+  color: white;
+}
+
+.container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.buttons {
+  
+            margin: 5px;
+            padding: 5px;
+         
+            width: 250px;
+            height: 110px;
+            overflow: auto;
+            text-align: justify;
+        
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.neon-button {
+  font-size: 1rem;
+
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  margin: 2rem;
+  border-radius: 0.25em;
+  position: relative;
+}
+
+
+.neon-button__1 {
+  color: var(--clr-one);
+  border: var(--clr-one) 0.125em solid;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em --clr-one;
+  box-shadow: inset 0 0 0.5em 0 var(--clr-one), 0 0 0.5em 0 var(--clr-one);
+}
+.neon-button__2 {
+  color: var(--clr-two);
+  border: var(--clr-two) 0.125em solid;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em --clr-two;
+  box-shadow: inset 0 0 0.5em 0 var(--clr-two), 0 0 0.5em 0 var(--clr-two);
+}
+
+.neon-button__3 {
+  color: var(--clr-three);
+  border: var(--clr-three) 0.125em solid;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em --clr-three;
+  box-shadow: inset 0 0 0.5em 0 var(--clr-three), 0 0 0.5em 0 var(--clr-three);
+}
+.neon-button__4 {
+  color: var(--clr-four);
+  border: var(--clr-four) 0.125em solid;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em --clr-four;
+  box-shadow: inset 0 0 0.5em 0 var(--clr-four), 0 0 0.5em 0 var(--clr-four);
+}
+.neon-button__5{
+  color: var(--clr-five);
+  border: var(--clr-five) 0.125em solid;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em --clr-five;
+  box-shadow: inset 0 0 0.5em 0 var(--clr-five), 0 0 0.5em 0 var(--clr-five);
+}
+.neon-button__6{
+  color: var(--clr-6);
+  border: var(--clr-6) 0.125em solid;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em --clr-6;
+  box-shadow: inset 0 0 0.5em 0 var(--clr-6), 0 0 0.5em 0 var(--clr-6);
+}
+.neon-button__7{
+  color: var(--clr-7);
+  border: var(--clr-7) 0.125em solid;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em --clr-7;
+  box-shadow: inset 0 0 0.5em 0 var(--clr-7), 0 0 0.5em 0 var(--clr-7);
+}
+.neon-button__8{
+  color: var(--clr-8);
+  border: var(--clr-8) 0.125em solid;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em --clr-8;
+  box-shadow: inset 0 0 0.5em 0 var(--clr-8), 0 0 0.5em 0 var(--clr-8);
+}
+.neon-button__9{
+  color: var(--clr-9);
+  border: var(--clr-9) 0.125em solid;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em --clr-9;
+  box-shadow: inset 0 0 0.5em 0 var(--clr-9), 0 0 0.5em 0 var(--clr-9);
+}
+.neon-button__10{
+  color: var(--clr-10);
+  border: var(--clr-10) 0.125em solid;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em --clr-10;
+  box-shadow: inset 0 0 0.5em 0 var(--clr-10), 0 0 0.5em 0 var(--clr-10);
+}
+.neon-button__11{
+  color: var(--clr-11);
+  border: var(--clr-11) 0.125em solid;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em --clr-11;
+  box-shadow: inset 0 0 0.5em 0 var(--clr-11), 0 0 0.5em 0 var(--clr-11);
+}
+.neon-button__12{
+  color: var(--clr-12);
+  border: var(--clr-12) 0.125em solid;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em --clr-12;
+  box-shadow: inset 0 0 0.5em 0 var(--clr-12), 0 0 0.5em 0 var(--clr-12);
+}
+.neon-button__13{
+  color: var(--clr-13);
+  border: var(--clr-13) 0.125em solid;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em --clr-13;
+  box-shadow: inset 0 0 0.5em 0 var(--clr-13), 0 0 0.5em 0 var(--clr-13);
+}
+
+.neon-button::before {
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: perspective(1.5em) rotateX(45deg) scale(0.8, 0.3);
+  filter: blur(1.5em);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.neon-button.active::before {
+  animation: scalingShadow 0.5s ease-in-out;
+}
+
+@keyframes scalingShadow {
+  0% {
+    top: 120%;
+    transform: perspective(1.5em) rotateX(45deg) scale(0.8, 0.3);
+  }
+  50% {
+    top: 165%;
+    transform: perspective(1.5em) rotateX(45deg) scale(0.75, 0.3);
+  }
+  100% {
+    top: 120%;
+    transform: perspective(1.5em) rotateX(45deg) scale(0.8, 0.3);
+  }
+}
+
+.neon-button__1::before {
+  background: var(--clr-one);
+}
+
+.neon-button__2::before {
+  background: var(--clr-two);
+}
+
+.neon-button__3::before {
+  background: var(--clr-three);
+}
+.neon-button__4::before {
+  background: var(--clr-four);
+}
+.neon-button__5::before {
+  background: var(--clr-five);
+}
+.neon-button__6::before {
+  background: var(--clr-6);
+}
+.neon-button__7::before {
+  background: var(--clr-7);
+}
+.neon-button__8::before {
+  background: var(--clr-8);
+}
+.neon-button__9::before {
+  background: var(--clr-9);
+}
+.neon-button__10::before {
+  background: var(--clr-10);
+}
+.neon-button__11::before {
+  background: var(--clr-11);
+}
+.neon-button__12::before {
+  background: var(--clr-12);
+}
+.neon-button__13::before {
+  background: var(--clr-13);
+}
+.neon-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 100ms linear;
+}
+
+.neon-button__1::after {
+  box-shadow: 0 0 2em 0.5em var(--clr-one);
+  background-color: var(--clr-one);
+}
+
+.neon-button__2::after {
+  box-shadow: 0 0 2em 0.5em var(--clr-two);
+  background-color: var(--clr-two);
+}
+
+.neon-button__3::after {
+  box-shadow: 0 0 2em 0.5em var(--clr-three);
+  background-color: var(--clr-three);
+}
+.neon-button__4::after {
+  box-shadow: 0 0 2em 0.5em var(--clr-four);
+  background-color: var(--clr-four);
+}
+.neon-button__5::after {
+  box-shadow: 0 0 2em 0.5em var(--clr-five);
+  background-color: var(--clr-five);
+}
+.neon-button__6::after {
+  box-shadow: 0 0 2em 0.5em var(--clr-6);
+  background-color: var(--clr-6);
+}
+.neon-button__7::after {
+  box-shadow: 0 0 2em 0.5em var(--clr-7);
+  background-color: var(--clr-7);
+}
+.neon-button__8::after {
+  box-shadow: 0 0 2em 0.5em var(--clr-8);
+  background-color: var(--clr-8);
+}
+.neon-button__9::after {
+  box-shadow: 0 0 2em 0.5em var(--clr-9);
+  background-color: var(--clr-9);
+}
+.neon-button__10::after {
+  box-shadow: 0 0 2em 0.5em var(--clr-10);
+  background-color: var(--clr-10);
+}
+.neon-button__11::after {
+  box-shadow: 0 0 2em 0.5em var(--clr-11);
+  background-color: var(--clr-11);
+}
+.neon-button__12::after {
+  box-shadow: 0 0 2em 0.5em var(--clr-12);
+  background-color: var(--clr-12);
+}
+.neon-button__13::after {
+  box-shadow: 0 0 2em 0.5em var(--clr-13);
+  background-color: var(--clr-13);
+}
+.neon-button:hover::before,
+.neon-button:focus::before {
+  opacity: 1;
+}
+
+.neon-button:hover::after,
+.neon-button:focus::after {
+  opacity: 1;
+}
+
+.neon-button:hover,
+.neon-button:focus {
+  outline: none;
+  color: var(--clr-bg);
+  text-shadow: none;
+}
+
+.active {
+  animation: animate 0.5s ease-in-out;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-40%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+.sum{
+  text-align: center;
+  color: rgba(4, 255, 255, 0.911);
+}
+  h2{
+    /* -shboxadow:0 0 9px rgba(34, 14, 214, 0.959), 0 0 7px rgb(0, 0, 0),0 0 10px rgb(0, 0, 0); */
+    color:aqua ;
+    text-align: center;
+   font-family:cursive ;
+    font-size: 50px bold;
+    margin-top:250px;
+    margin-left:100px;
+    margin-top:-10px;
+  }
+
+      #image{
+       
+    height:30px;
+    width:50px;
+    perspective: 1000px;
+    border:1px solid #ddd;
+  }
+  #image {
+    width: 100px;;
+    height:200px;
+    background-size: cover;
+    background-position: center;
+    transform-style: peserve- 3d; 
+    transform: rotateX(-35deg) rotateY(-25deg);
+  transition: transfom 0.5s ease-in-out;
+  box-shadow:0 0 100px rgb(253, 255, 253) ;
+   
+  }
+  #image:hover img{
+    transform: rotateY(60deg) rotateX(60deg);
+  } 
+  h1{
+    display: flex;
+  }
+  input{
+    font-size:10px;
+    width:200px;
+    border:2px solid red;
+    border-radius:20px;
+    background:transparent;
+    padding-left:10px;
+color: #fff;
+  }
+  button{
+    margin-top: -40px;
+    font-size:10px;
+    background:black;
+    color:white;
+    border:2px solid gray;
+    border-radius:20px;
+  }
+  .contant{
+    display: flex;
+    padding-top:-10px;
+    display:none;
+    font-size:30px;
+    font-family:'pacifico',cursive;
+    color:red;
+    taxt-shadow:0 0 9px blue, 0 0 7px #fff,0 0 10px #fff;
+    
+  }
+  h2{
+    display:flex ;
+  }
+  </style>
+
+</head>
+<body>
+  <!-- 
+this is my first pen, i hope you like it.
+if you like it make sure to give it a like and give me your thoughts in the comments section bellow :)
+if you want to get my updates folow me on twitter: @salihcodes
+-->
+<div class="container">
+  <h1>please give me your feedback</h1>
+  <p>Click on the button if you are on mobile. choice your name</p>
+  <details ><summary class="sum"> choice your name</summary>
+  <div class="buttons" id="m1">
+
+
+<a href="#"  id="image-link" data-image="https://iili.io/2nA2hKB.jpg" class="neon-button neon-button__1">Rahul</a><br>
+<a href="#"  id="image-link" data-image="https://images.app.goo.gl/zU8JiTJzUnLAXZaz5"     class="neon-button neon-button__2">kathan</a><br>
+<a href="#"  id="image-link" data-image="https://iili.io/2nRdp5X.jpg"    class="neon-button neon-button__3">Sweety</a><br>
+<a href="#"  id="image-link" data-image="D:\Images\AK.jpg"   class="neon-button neon-button__4"> adra sahil</a><br>
+<a href="#"  id="image-link" data-image="D:\Images\AK.jpg"   class="neon-button neon-button__5">sujal</a><br>
+<a href="#"  id="image-link" data-image="D:\Images\AK.jpg"   class="neon-button neon-button__6">meet</a><br>
+<a href="#"  id="image-link" data-image="D:\Images\AK.jpg"    class="neon-button neon-button__7">vaishnavi</a><br>
+<a href="#"  id="image-link" data-image="D:\Images\AK.jpg"  class="neon-button neon-button__8">rahul k</a><br>
+<a href="#"  id="image-link" data-image="D:\Images\AK.jpg"   class="neon-button neon-button__9"> Nikhil</a><br>
+<a href="#"  id="image-link" data-image="D:\Images\AK.jpg"   class="neon-button neon-button__10"> jigar</a><br>
+<a href="#"  id="image-link" data-image="D:\Images\AK.jpg"   class="neon-button neon-button__11"> Raj</a><br>
+<a href="#" id="image-link" data-image="D:\Images\AK.jpg"  class="neon-button neon-button__12"> pradip</a><br>
+  </details>
+
+    
+
+  <br>
+  <br>
+  <input type="text" placeholder="enter name" id="name">
+   <br>
+  <br>
+  <button onclick="show()"> OK</button>
+  
+  </div>
+  </div>
+</div>
+
+ <!-- Image Container -->
+<div id="image-container" >
+  <img id="image" src="" style="display:none;">
+  </div>
+</div>
+<div class="contant" id="c1" >
+  <center>
+    <h2>Happy</h2><h2 class="hert">diwali</h2>
+     
+    <h2 id="addname"></h2>
+     <h2>ji</h2>
+    
+  </center>
+</div>
+                             
+                                                                
+<script>
+  // Anchor tag par click event listener lagao
+  document.querySelectorAll('#image-link').forEach(function(anchor) {
+  anchor.addEventListener('click', function(event) {
+  event.preventDefault();
+  // Image ka source aur display property update karo
+  var image = document.getElementById('image');
+  image.src = anchor.getAttribute('data-image');
+  image.style.display = 'block';
+  });
+  });
+  function show(){
+    var name=document.getElementById('name').value;
+    if(document.getElementById('name').value==""){
+      alert('please enter your name baby');
+    }
+    else{
+      document.getElementById('addname').innerHTML=name;
+      document.getElementById('m1').style.display='none';
+      document.getElementById('c1').style.display='block';
+    }
+    
+  }
+  </script>
+
+  </body>
+</html>
